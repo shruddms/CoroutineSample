@@ -12,6 +12,8 @@
 
     <string name="lifecycle_scope">LifecycleScope</string>
     <string name="global_scope">GlobalScope</string>
+    <string name="coroutine_scope">CoroutineScope</string>
+    <string name="supervisor_scope">SupervisorScope</string>
     <string name="handler_exception">Handler Exception</string>
     <string name="two_tasks">Two Tasks</string>
     <string name="two_async">Two Async</string>

@@ -14,7 +14,7 @@
         android:theme="@style/Theme.CoroutineSample"
         tools:targetApi="31">
         <activity
-            android:name=".BasicTestActivity"
+            android:name=".basic.BasicTestActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

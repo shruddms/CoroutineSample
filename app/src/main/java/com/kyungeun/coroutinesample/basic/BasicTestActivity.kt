@@ -1,18 +1,12 @@
-package com.kyungeun.coroutinesample
+package com.kyungeun.coroutinesample.basic
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.snackbar.Snackbar
+import com.kyungeun.coroutinesample.R
 import com.kyungeun.coroutinesample.databinding.ActivityBasicTestBinding
-import kotlinx.coroutines.CoroutineExceptionHandler
-import kotlinx.coroutines.DelicateCoroutinesApi
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.async
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
 import timber.log.Timber
 
 class BasicTestActivity : AppCompatActivity() {
@@ -26,6 +20,8 @@ class BasicTestActivity : AppCompatActivity() {
 
         binding.btnLifecycleScope.setOnClickListener { testLifecycleScope() }
         binding.btnGlobalScope.setOnClickListener { testGlobalScope() }
+        binding.btnCoroutineScope.setOnClickListener { testCoroutineScope() }
+        binding.btnSupervisorScope.setOnClickListener { testSupervisorScope() }
         binding.btnHandlerException.setOnClickListener { testHandlerException() }
         binding.btnTwoTasks.setOnClickListener { testTwoTasks() }
         binding.btnTwoAsync.setOnClickListener { testTwoAsync() }
@@ -47,6 +43,48 @@ class BasicTestActivity : AppCompatActivity() {
             Timber.d("Before Task")
             doLongRunningTask()
             Timber.d("After Task")
+        }
+    }
+
+    private fun testCoroutineScope() {
+        showSnackBar(getString(R.string.coroutine_scope))
+        // If one of the task fails, the other tasks will not run
+        CoroutineScope(Dispatchers.Default).launch(exceptionHandler) {
+            val testOne = withContext(Dispatchers.Default) { doLongRunningTaskOne() }
+            Timber.d("testOne = $testOne")
+
+            val testError = withContext(Dispatchers.Default) {
+                doLongRunningTaskError(true)
+            }
+            Timber.d("testError = $testError")
+
+            val testTwo = withContext(Dispatchers.Default) { doLongRunningTaskTwo() }
+            Timber.d("testTwo = $testTwo")
+        }
+    }
+
+    private fun testSupervisorScope() {
+        showSnackBar(getString(R.string.supervisor_scope))
+        CoroutineScope(Dispatchers.Default).launch(exceptionHandler) {
+            supervisorScope { // If one of the task fails, the other tasks will continue to run
+                val testOne = withContext(Dispatchers.Default) { doLongRunningTaskOne() }
+                Timber.d("testOne = $testOne")
+
+                val testError = try {
+                    withContext(Dispatchers.Default) {
+                        doLongRunningTaskError(
+                            true
+                        )
+                    }
+                } catch (e: Exception) {
+                    Timber.e("exception: $e")
+                    null
+                }
+                Timber.d("testError = $testError")
+
+                val testTwo = withContext(Dispatchers.Default) { doLongRunningTaskTwo() }
+                Timber.d("testTwo = $testTwo")
+            }
         }
     }
 
@@ -115,6 +153,16 @@ class BasicTestActivity : AppCompatActivity() {
     private suspend fun doLongRunningTaskTwo(): Int {
         return withContext(Dispatchers.Default) {
             delay(2000)
+            return@withContext 10
+        }
+    }
+
+    private suspend fun doLongRunningTaskError(check: Boolean): Int {
+        return withContext(Dispatchers.Default) {
+            delay(2000)
+            if (check) {
+                throw Exception("Some Error")
+            }
             return@withContext 10
         }
     }
