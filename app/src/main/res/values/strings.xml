@@ -7,6 +7,12 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- Strings used for buttons -->
+    <string name="basic_test">Basic Test</string>
+
+    <string name="lifecycle_scope">LifecycleScope</string>
+    <string name="global_scope">GlobalScope</string>
+    <string name="handler_exception">Handler Exception</string>
+    <string name="two_tasks">Two Tasks</string>
+    <string name="two_async">Two Async</string>
 </resources>
