@@ -9,7 +9,6 @@
 
     <!-- Strings used for buttons -->
     <string name="basic_test">Basic Test</string>
-    <string name="repeat_on_lifecycle_test">repeatOnLifecycle Test</string>
 
     <string name="lifecycle_scope">LifecycleScope</string>
     <string name="global_scope">GlobalScope</string>
@@ -18,4 +17,15 @@
     <string name="handler_exception">Handler Exception</string>
     <string name="two_tasks">Two Tasks</string>
     <string name="two_async">Two Async</string>
+
+    <string name="repeat_on_lifecycle_test">repeatOnLifecycle Test</string>
+
+    <string name="channel_test">Channel Test</string>
+
+    <string name="channel_basic">Channel basics</string>
+    <string name="channel_producers">Building channel producers</string>
+    <string name="channel_pipeline">Prime numbers with pipeline</string>
+    <string name="channel_fair">Channels are fair</string>
+    
+
 </resources>
