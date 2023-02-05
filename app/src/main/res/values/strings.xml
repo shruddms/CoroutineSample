@@ -9,6 +9,7 @@
 
     <!-- Strings used for buttons -->
     <string name="basic_test">Basic Test</string>
+    <string name="repeat_on_lifecycle_test">repeatOnLifecycle Test</string>
 
     <string name="lifecycle_scope">LifecycleScope</string>
     <string name="global_scope">GlobalScope</string>

@@ -23,6 +23,16 @@
             android:textAllCaps="false"
             app:backgroundTint="@null"
             android:background="@drawable/btn_white"/>
+        <Button
+            android:id="@+id/btn_repeat_on_lifecycle_test"
+            android:text="@string/repeat_on_lifecycle_test"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            app:backgroundTint="@null"
+            android:background="@drawable/btn_white"/>
 
     </LinearLayout>
 

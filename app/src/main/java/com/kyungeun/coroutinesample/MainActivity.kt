@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.kyungeun.coroutinesample.basic.BasicTestActivity
 import com.kyungeun.coroutinesample.databinding.ActivityMainBinding
+import com.kyungeun.coroutinesample.repeatOnLifecycle.RepeatOnLifecycleTestActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,6 +18,9 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnTest.setOnClickListener {
             startActivity(Intent(this@MainActivity, BasicTestActivity::class.java))
+        }
+        binding.btnRepeatOnLifecycleTest.setOnClickListener {
+            startActivity(Intent(this@MainActivity, RepeatOnLifecycleTestActivity::class.java))
         }
 
     }
