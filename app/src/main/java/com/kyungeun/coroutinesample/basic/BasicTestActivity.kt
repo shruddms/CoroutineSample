@@ -131,6 +131,7 @@ class BasicTestActivity : AppCompatActivity() {
         }
     }
 
+    // CoroutineExceptionHandler: An optional element in the coroutine context to handle uncaught exceptions.
     private val exceptionHandler = CoroutineExceptionHandler { _, e ->
         Timber.e("exception handler: $e")
     }
