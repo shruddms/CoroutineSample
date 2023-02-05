@@ -14,7 +14,21 @@
         android:theme="@style/Theme.CoroutineSample"
         tools:targetApi="31">
         <activity
-            android:name=".BasicTestActivity"
+            android:name=".channel.ChannelActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".repeatOnLifecycle.RepeatOnLifecycleTestActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".basic.BasicTestActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
