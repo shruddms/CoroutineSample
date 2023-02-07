@@ -4,8 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.kyungeun.coroutinesample.basic.BasicTestActivity
-import com.kyungeun.coroutinesample.channel.ChannelActivity
+import com.kyungeun.coroutinesample.channel.ChannelTestActivity
 import com.kyungeun.coroutinesample.databinding.ActivityMainBinding
+import com.kyungeun.coroutinesample.flow.FlowTestActivity
 import com.kyungeun.coroutinesample.repeatOnLifecycle.RepeatOnLifecycleTestActivity
 
 class MainActivity : AppCompatActivity() {
@@ -24,7 +25,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this@MainActivity, RepeatOnLifecycleTestActivity::class.java))
         }
         binding.btnChannelTest.setOnClickListener {
-            startActivity(Intent(this@MainActivity, ChannelActivity::class.java))
+            startActivity(Intent(this@MainActivity, ChannelTestActivity::class.java))
+        }
+        binding.btnFlowTest.setOnClickListener {
+            startActivity(Intent(this@MainActivity, FlowTestActivity::class.java))
         }
     }
 }
