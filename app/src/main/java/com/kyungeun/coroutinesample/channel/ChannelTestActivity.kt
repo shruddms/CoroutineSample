@@ -2,7 +2,7 @@ package com.kyungeun.coroutinesample.channel
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.kyungeun.coroutinesample.databinding.ActivityChannelBinding
+import com.kyungeun.coroutinesample.databinding.ActivityChannelTestBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.cancelChildren
 import kotlinx.coroutines.channels.Channel
@@ -14,13 +14,13 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import timber.log.Timber
 
-class ChannelActivity : AppCompatActivity() {
+class ChannelTestActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityChannelBinding
+    private lateinit var binding: ActivityChannelTestBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityChannelBinding.inflate(layoutInflater)
+        binding = ActivityChannelTestBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.btnChannelBasic.setOnClickListener { testChannelBasic() }

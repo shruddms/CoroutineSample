@@ -14,7 +14,14 @@
         android:theme="@style/Theme.CoroutineSample"
         tools:targetApi="31">
         <activity
-            android:name=".channel.ChannelActivity"
+            android:name=".flow.FlowTestActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".channel.ChannelTestActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
