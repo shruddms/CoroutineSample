@@ -26,6 +26,7 @@
     <string name="channel_producers">Building channel producers</string>
     <string name="channel_pipeline">Prime numbers with pipeline</string>
     <string name="channel_fair">Channels are fair</string>
-    
 
+    <string name="flow_test">Flow Test</string>
+    
 </resources>
