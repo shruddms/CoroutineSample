@@ -27,5 +27,9 @@
 
     <string name="flow_test">Flow Test</string>
     <string name="flow_basic">Flow basics</string>
-
+    <string name="flow_cancellation">Flow cancellation</string>
+    <string name="flow_operators">Flow operators</string>
+    <string name="flow_on">Flow on</string>
+    <string name="flow_buffering">Flow buffering</string>
+    <string name="flow_exceptions">Flow exceptions</string>
 </resources>
