@@ -4,23 +4,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/gray"
     tools:context=".flow.FlowTestActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="20dp">
+        android:layout_margin="20dp"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_flow_basic"
-        android:text="@string/flow_basic"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="10dp"
-        android:textColor="@color/black"
-        android:textAllCaps="false"
-        app:backgroundTint="@null"
-        android:background="@drawable/btn_white"/>
+        <Button
+            android:id="@+id/btn_flow_basic"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_white"
+            android:text="@string/flow_basic"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btn_flow_cancellation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_white"
+            android:text="@string/flow_cancellation"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btn_flow_operators"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_white"
+            android:text="@string/flow_operators"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btn_flow_on"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_white"
+            android:text="@string/flow_on"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btn_flow_buffering"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_white"
+            android:text="@string/flow_buffering"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btn_flow_exceptions"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_white"
+            android:text="@string/flow_exceptions"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:backgroundTint="@null" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
