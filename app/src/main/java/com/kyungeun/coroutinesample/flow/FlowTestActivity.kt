@@ -1,7 +1,7 @@
 package com.kyungeun.coroutinesample.flow
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.kyungeun.coroutinesample.databinding.ActivityFlowTestBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
