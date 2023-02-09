@@ -1,11 +1,10 @@
 package com.kyungeun.coroutinesample.repeatOnLifecycle
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import com.kyungeun.coroutinesample.R
 import com.kyungeun.coroutinesample.databinding.ActivityRepeatOnLifecycleTestBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
