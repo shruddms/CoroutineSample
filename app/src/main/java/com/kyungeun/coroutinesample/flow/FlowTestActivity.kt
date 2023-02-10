@@ -71,7 +71,7 @@ class FlowTestActivity : AppCompatActivity() {
                 Timber.d("value : $value")
             }
         }
-        println("Collected in $time ms")
+        Timber.d("Collected in $time ms")
     }
 
     private fun testFlowExceptions() = runBlocking<Unit> {
